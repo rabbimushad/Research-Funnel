@@ -1,0 +1,10 @@
+{
+  "name": "research-funnel",
+  "version": "0.2.0",
+  "description": "Orchestrates validated research skills (fasttrack-topic-validator, paper-search, research-litnote, paper-compare, decision-matrix, related-work, academic-document-writer, paper-critique, citation-check, llm-council) into a full research funnel from idea to publication, with a human decision gate at every stage: idea, gap check, reading, study design, experiments, venue choice, drafting, pre-submission review, and reviewer response.",
+  "author": {
+    "name": "rabbimushad"
+  },
+  "keywords": ["research", "academic", "phd", "paper", "literature", "publication", "workflow"],
+  "license": "MIT"
+}

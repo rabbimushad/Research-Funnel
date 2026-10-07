@@ -1,0 +1,11 @@
+{
+  "name": "research-funnel",
+  "owner": { "name": "rabbimushad" },
+  "plugins": [
+    {
+      "name": "research-funnel",
+      "source": "./",
+      "description": "Full research funnel from idea to publication with human decision gates, built on validated research skills."
+    }
+  ]
+}
