@@ -6,6 +6,26 @@ A complete research workflow from first idea to published paper. Claude does the
 
 Say **"start research"** (or run `/research-start`). Claude sets up a `research/` folder, finds where your project is, and names one next action.
 
+## Two modes
+
+| | Guided (default) | Autopilot |
+|---|---|---|
+| Say | "start research" | "autopilot" / "continue autopilot" |
+| Who does the work | Claude assists, you decide each gate | Claude runs every stage |
+| You are asked | At every gate, attempt-first | Only at 5 hard checkpoints |
+| Best for | Learning, building research judgment | Speed, parallel projects |
+
+**Autopilot's 5 hard checkpoints** (never automated):
+1. **Go** on the idea after the gap check
+2. **Run access**: API keys, data access, ethics approval, budget
+3. **Spot-check** a sample of raw results
+4. **Main claim**: approve the contribution and abstract claim
+5. **Submit**: read the final PDF, sign author declarations
+
+Everything else is decided by Claude and logged with `[AUTO]` and a reason. Soft questions go to an `inbox.md` with a default taken, so a run never stalls waiting for you. Autopilot also keeps a provenance log and writes the AI-use disclosure and a 1-page comprehension brief (with likely reviewer questions) so you can defend every claim.
+
+**Integrity is built in:** no invented citations, data or results; every number comes from code that ran; AI is never listed as an author.
+
 ## The 9 stages
 
 | # | Stage | Say this | You decide at the gate |

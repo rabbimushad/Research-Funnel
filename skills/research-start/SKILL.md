@@ -25,6 +25,11 @@ Read `${CLAUDE_PLUGIN_ROOT}/references/gates.md` (gate rules), `workspace.md` (f
 
 At first run, check which mapped skills are installed. List any missing in one line and suggest the Research Desk plugin; continue with fallbacks.
 
+## Two modes
+
+- **Guided** (default): every gate waits for the human, attempt-first on.
+- **Autopilot**: Claude runs stages itself and stops only at 5 hard checkpoints. If the user asks for autopilot, hand off to the research-autopilot skill.
+
 ## Steps
 
 1. Look for a `research/` folder in the working folder. If none exists, create it with the layout in `workspace.md`, including `ideas.md`, `reading-log.md`, and `projects/`.

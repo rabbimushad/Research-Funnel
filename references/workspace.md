@@ -14,6 +14,9 @@ research/
       venue.md        # venue decision (stage 6)
       draft/          # section files (stage 7)
       reviews/        # pre-submit report, reviewer comments, response letter
+      inbox.md        # questions for the human, with defaults taken (autopilot)
+      provenance.md   # who/what produced each section (autopilot, for AI-use disclosure)
+      code/           # runnable experiment code + RUN_ME.md
 ```
 
 ## status.md template

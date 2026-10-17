@@ -2,6 +2,10 @@
 
 The funnel is fast because Claude does the mechanical work. It stays honest because a human makes every decision that shapes the research.
 
+## Modes
+
+These rules apply in **guided** mode. In **autopilot** mode, follow `autopilot.md` instead: attempt-first is skipped, soft gates become logged `[AUTO]` decisions, and only the 5 hard checkpoints stop the run.
+
 ## Gate rules
 
 1. **Attempt first.** Before Claude produces its answer at a gate, ask the user for their own attempt (one line is enough): their pick, their guess at the weakness, their research question. Then compare. This trains judgment; skipping it trains dependence.
