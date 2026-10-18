@@ -24,6 +24,8 @@ Say **"start research"** (or run `/research-start`). Claude sets up a `research/
 
 Everything else is decided by Claude and logged with `[AUTO]` and a reason. Soft questions go to an `inbox.md` with a default taken, so a run never stalls waiting for you. Autopilot also keeps a provenance log and writes the AI-use disclosure and a 1-page comprehension brief (with likely reviewer questions) so you can defend every claim.
 
+**Learn mode (on by default in autopilot):** speed without losing skill. After each stage you answer 3 one-line questions (why this choice, what if it changed, explain the concept) in under 3 minutes. Weak answers get a short lesson and a concept card; missed concepts come back on a spaced schedule (1, 3, 7, 21 days) until mastered. Before submitting, a 10-question defense drill checks you can defend the paper. Say "learning status" to see progress. Options: `learn: queue` (answer later), `learn: off` (non-core papers only).
+
 **Integrity is built in:** no invented citations, data or results; every number comes from code that ran; AI is never listed as an author.
 
 ## The 9 stages

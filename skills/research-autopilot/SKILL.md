@@ -1,11 +1,11 @@
 ---
 name: research-autopilot
-description: Run the research funnel automatically from idea to submission-ready paper, with Claude doing the work and the human giving input only at five hard checkpoints (idea go, run access, results spot-check, main claim, submit). Use when the user says "autopilot", "run my research automatically", "do the research yourself", "fully automated research", "continue autopilot", or "run the funnel end to end".
+description: Run the research funnel automatically from idea to submission-ready paper, with Claude doing the work, short learn checks after each stage so the human builds research skill fast, and human input at five hard checkpoints (idea go, run access, results spot-check, main claim, submit). Use when the user says "autopilot", "run my research automatically", "do the research yourself", "fully automated research", "continue autopilot", or "run the funnel end to end".
 ---
 
 # Research Autopilot
 
-Read at the plugin root (`${CLAUDE_PLUGIN_ROOT}/references/`, or `../../references/`) before starting: `autopilot.md` (checkpoints, inbox, integrity), `skill-map.md` (which validated skill each stage calls), `workspace.md` (files), `novelty-rubric.md`.
+Read at the plugin root (`${CLAUDE_PLUGIN_ROOT}/references/`, or `../../references/`) before starting: `autopilot.md` (checkpoints, inbox, integrity), `learn-mode.md` (learn checks, spaced review, defense drill), `skill-map.md` (which validated skill each stage calls), `workspace.md` (files), `novelty-rubric.md`.
 
 ## Mode switch
 
@@ -18,9 +18,10 @@ In autopilot, the funnel stage skills behave as follows:
 ## Start or resume
 
 1. Find or create `research/`. Read the active project's `status.md`, `inbox.md`, and `provenance.md` (create from templates if missing).
-2. Apply any newly answered inbox items; re-run only the work they affect.
-3. Determine the current stage from the gate log and continue from there.
-4. If no project exists: take the user's topic or the highest-novelty `new`/`testing` idea in `research/ideas.md`; if neither exists, ask once for a field and constraints, then proceed.
+2. Ask up to 2 due spaced-review questions from `research/learning-log.md` (≤1 minute), per `learn-mode.md`.
+3. Apply any newly answered inbox items, including queued learn checks; re-run only the work they affect.
+4. Determine the current stage from the gate log and continue from there.
+5. If no project exists: take the user's topic or the highest-novelty `new`/`testing` idea in `research/ideas.md`; if neither exists, ask once for a field and constraints, then proceed.
 
 ## Pipeline
 
@@ -38,6 +39,12 @@ Run each stage by following its funnel skill in autopilot mode, invoking the val
 | 8 Pre-submit | pre-submit | critique → fix → re-critique loop (max 2 rounds), citation check, numbers check, disclosure, comprehension brief | **H5 Submit** |
 | 9 Revision | reviewer-response | revision plan + response letter when reviews arrive | human approves letter |
 
+## Learn checks (after every stage)
+
+Learn mode is **on** by default (`learn: on`). After finishing each stage's work, run the learn check in `learn-mode.md`: 3 one-line questions (Why, What-if, Explain) about that stage's decisions, scored /6, with a concept card for the weakest item, adaptive length, and a 3-minute cap. Log to `research/learning-log.md`. The user can switch with "learn: queue" or "learn: off" (non-core papers only).
+
+Before H5 Submit, run the **defense drill** (10 questions, pass mark 14/20).
+
 ## Experiments (stage 5) specifics
 
 - Write code that the human can rerun: pinned dependencies, seeds, config file, one command to run, outputs saved as CSV.
@@ -53,7 +60,7 @@ Run each stage by following its funnel skill in autopilot mode, invoking the val
 
 ## End of every run
 
-Write the run report from `autopilot.md` (max 10 lines) in chat and append it to `status.md`. Name exactly what the human must provide, or "nothing — say 'continue autopilot'".
+Write the run report from `autopilot.md` (max 10 lines) in chat, including one learning line (last learn-check score, concepts due, weakest area), and append it to `status.md`. Name exactly what the human must provide, or "nothing — say 'continue autopilot'".
 
 ## Rules
 

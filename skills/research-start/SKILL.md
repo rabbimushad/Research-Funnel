@@ -32,6 +32,7 @@ At first run, check which mapped skills are installed. List any missing in one l
 
 ## Steps
 
+0. If `research/learning-log.md` has concepts due for review, ask up to 2 review questions first (≤1 minute), per `learn-mode.md`. If the user says "learning status", report per `learn-mode.md` and stop.
 1. Look for a `research/` folder in the working folder. If none exists, create it with the layout in `workspace.md`, including `ideas.md`, `reading-log.md`, and `projects/`.
 2. Ask which project (or create `projects/<slug>/status.md` from the template in `workspace.md`).
 3. Read `status.md`. Determine the current stage from the last passed gate.

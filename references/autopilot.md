@@ -16,6 +16,10 @@ These are never automated, because they need the human's judgment, resources, or
 
 Everything not listed here, Claude decides.
 
+## Learn checks
+
+Autopilot pairs every stage with a short learn check so speed does not cost skill. Rules, scoring, spaced review and the pre-submit defense drill are in `learn-mode.md`.
+
 ## Inbox, not interruptions
 
 Claude never blocks waiting for a reply on a soft question. It writes the question to `research/projects/<slug>/inbox.md`, picks a sensible default, marks it `[DEFAULT TAKEN]`, and keeps going. The human can answer later; Claude applies the answer on the next run and re-does only what it affects.

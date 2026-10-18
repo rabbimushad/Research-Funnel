@@ -6,6 +6,7 @@ All funnel skills read and write these files. Keep them plain Markdown so any to
 research/
   ideas.md            # central idea bank, all projects (append only)
   reading-log.md      # one 5-line entry per paper read
+  learning-log.md     # concepts, scores, spaced-review schedule (learn mode)
   projects/
     <slug>/
       status.md       # stage, gates passed, deadlines, next action
