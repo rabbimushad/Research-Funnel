@@ -5,7 +5,7 @@ description: Run the research funnel automatically from idea to submission-ready
 
 # Research Autopilot
 
-Read at the plugin root (`${CLAUDE_PLUGIN_ROOT}/references/`, or `../../references/`) before starting: `autopilot.md` (checkpoints, inbox, integrity), `learn-mode.md` (learn checks, spaced review, defense drill), `skill-map.md` (which validated skill each stage calls), `workspace.md` (files), `novelty-rubric.md`.
+Read at the plugin root (`${CLAUDE_PLUGIN_ROOT}/references/`, or `../../references/`) before starting: `autopilot.md` (checkpoints, inbox, integrity), `learn-mode.md` (learn checks, spaced review, defense drill), `router.md` (who does each task, growth budget), `speed-read.md` (reading maps), `skill-map.md` (which validated skill each stage calls), `workspace.md` (files), `novelty-rubric.md`.
 
 ## Mode switch
 
@@ -39,6 +39,17 @@ Run each stage by following its funnel skill in autopilot mode, invoking the val
 | 8 Pre-submit | pre-submit | critique → fix → re-critique loop (max 2 rounds), citation check, numbers check, disclosure, comprehension brief | **H5 Submit** |
 | 9 Revision | reviewer-response | revision plan + response letter when reviews arrive | human approves letter |
 
+## Learning-value router (every task)
+
+Before each task, classify it per `router.md`:
+- **M (mechanical)** → do it; attach a one-line "why" note.
+- **G (growth)** → only for core skills not yet mastered and within today's growth budget (default 30 min/day): ask the human for a 1–3 line attempt, then complete it and give feedback. Collect the day's G tasks into a single message so the human answers them in one sitting.
+- **J (judgment)** → hard checkpoints and claim-changing choices; always the human.
+
+Mastered skills move to M automatically; weak ones return to G. Tight deadlines (≤7 days) cap growth at 10 min/day.
+
+In stage 3 (reading), give the human speed-read maps (`speed-read.md`) for the Targeted/Deep papers; read and log Skip/Skim papers yourself.
+
 ## Learn checks (after every stage)
 
 Learn mode is **on** by default (`learn: on`). After finishing each stage's work, run the learn check in `learn-mode.md`: 3 one-line questions (Why, What-if, Explain) about that stage's decisions, scored /6, with a concept card for the weakest item, adaptive length, and a 3-minute cap. Log to `research/learning-log.md`. The user can switch with "learn: queue" or "learn: off" (non-core papers only).
@@ -60,7 +71,7 @@ Before H5 Submit, run the **defense drill** (10 questions, pass mark 14/20).
 
 ## End of every run
 
-Write the run report from `autopilot.md` (max 10 lines) in chat, including one learning line (last learn-check score, concepts due, weakest area), and append it to `status.md`. Name exactly what the human must provide, or "nothing — say 'continue autopilot'".
+Write the run report from `autopilot.md` (max 10 lines) in chat, including one learning line (last learn-check score, concepts due, weakest area) and one router line (M/G/J counts, growth minutes used), and append it to `status.md`. Name exactly what the human must provide, or "nothing — say 'continue autopilot'".
 
 ## Rules
 

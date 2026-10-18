@@ -1,7 +1,7 @@
 {
   "name": "research-funnel",
-  "version": "0.4.0",
-  "description": "Orchestrates validated research skills (fasttrack-topic-validator, paper-search, research-litnote, paper-compare, decision-matrix, related-work, academic-document-writer, paper-critique, citation-check, llm-council) into a full research funnel from idea to publication, with two modes: guided (human decision gate at every stage) or autopilot (Claude runs every stage, learn checks with spaced review after each stage, human input at 5 hard checkpoints). Stages: idea, gap check, reading, study design, experiments, venue choice, drafting, pre-submission review, and reviewer response.",
+  "version": "0.5.0",
+  "description": "Orchestrates validated research skills (fasttrack-topic-validator, paper-search, research-litnote, paper-compare, decision-matrix, related-work, academic-document-writer, paper-critique, citation-check, llm-council) into a full research funnel from idea to publication, with two modes: guided (human decision gate at every stage) or autopilot (Claude runs every stage, a learning-value router that sends skill-building tasks to the human within a daily time budget, speed-read maps for every paper, learn checks with spaced review, and 5 hard checkpoints). Stages: idea, gap check, reading, study design, experiments, venue choice, drafting, pre-submission review, and reviewer response.",
   "author": {
     "name": "rabbimushad"
   },

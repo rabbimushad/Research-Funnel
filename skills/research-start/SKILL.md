@@ -28,7 +28,8 @@ At first run, check which mapped skills are installed. List any missing in one l
 ## Two modes
 
 - **Guided** (default): every gate waits for the human, attempt-first on.
-- **Autopilot**: Claude runs stages itself and stops only at 5 hard checkpoints. If the user asks for autopilot, hand off to the research-autopilot skill.
+- **Autopilot**: Claude runs stages itself, routes skill-building tasks back to the human within a daily growth budget (`router.md`), and stops at 5 hard checkpoints. If the user asks for autopilot, hand off to the research-autopilot skill.
+- Settings the user can give any time: "budget: <n> min" (daily growth time), "reading budget: <n> min/week".
 
 ## Steps
 

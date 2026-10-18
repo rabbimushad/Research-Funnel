@@ -26,6 +26,10 @@ Everything else is decided by Claude and logged with `[AUTO]` and a reason. Soft
 
 **Learn mode (on by default in autopilot):** speed without losing skill. After each stage you answer 3 one-line questions (why this choice, what if it changed, explain the concept) in under 3 minutes. Weak answers get a short lesson and a concept card; missed concepts come back on a spaced schedule (1, 3, 7, 21 days) until mastered. Before submitting, a 10-question defense drill checks you can defend the paper. Say "learning status" to see progress. Options: `learn: queue` (answer later), `learn: off` (non-core papers only).
 
+**Learning-value router (autopilot):** Claude does every mechanical task alone. Tasks that build a core research skill you have not mastered yet (framing, gap finding, design, stats, critique…) come to you first, as a 1–3 line attempt, within a daily growth budget (default 30 min). Mastered skills move to Claude; weak ones come back. Tight deadline? Growth shrinks to 10 min/day automatically. Set it with `budget: 15 min`.
+
+**Speed reading:** every suggested paper comes with a reading map: triage tier (Skip / Skim 5 min / Targeted 15 min / Deep 45 min), a 3-line summary, exactly which sections and figures to read with a question to answer for each, and what to skip. Say "reading plan" for a weekly plan within your reading budget.
+
 **Integrity is built in:** no invented citations, data or results; every number comes from code that ran; AI is never listed as an author.
 
 ## The 9 stages
